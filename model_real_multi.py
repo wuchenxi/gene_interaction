@@ -154,7 +154,8 @@ lock = Lock()
 
 def g_add_to_total_auc(auc, total_auc):
   with lock:
-    total_auc = map(add, total_auc, auc)
+    tmp = map(add, total_auc, auc)
+    for i in range(len(tmp)): total_auc[i] = tmp[i]
 
 
 def test_process(data, filename, starts, ends, i,total_auc):
