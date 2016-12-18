@@ -93,9 +93,7 @@ p(y=1|x)={1\over 1+e^{-\hat{y}(x)}}
 \end{equation}
 
 \begin{figure}[H]
-    \begin{center}
-       \includegraphics[scale=0.4]{framework_of_gpXGB}
-    \end{center}
+
 \caption{\label{fig1} The framework of gpXGB}
 \end{figure}
 
@@ -240,12 +238,6 @@ In a second analysis, we aim to verify some gene-gene interaction in the RA path
 The performance of our procedure gpXGB was compared to three previously published methods: Kernel Canonical Correlation-based U-statistic analysis (KCCU)\cite{4, 5}, the gene-based information gain method (GBIGM)\cite{6} and A Gene-based Gene-Gene interaction test method (AGGrEGATOr)\cite{7}. We adapted them to the task of ranking.
 
 \section{Results}
-
-\begin{figure}[H]
-    \begin{center}
-       \includegraphics[scale=0.7]{Rplot02.png}
-    \end{center}
-\end{figure}
 
 \section{Discussion}
 
