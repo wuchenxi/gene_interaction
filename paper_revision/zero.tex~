@@ -1,0 +1,28 @@
+\documentclass[]{article}
+\usepackage{fullpage}
+\usepackage{amscd,amsmath,amsthm,amssymb,mathtools}
+\usepackage{mathrsfs}
+\usepackage{comment}
+\usepackage[all,cmtip]{xy}
+\usepackage{color}
+\begin{document}
+Compactification of an iso-Delaunay cell\\
+
+Let $\mathcal{D}$ be a cellulation of a surface with marked points $S$, $C$ be the set of all flat structure so that $\mathcal{D}$ is a Delaunay cellulation of a translation surface. Consider the map from $C$ to the product of $\mathbb{CP}^1$s and $S^1$s which send each flat structure to the ratio of the holonomies, direction of the holonomies, and the shearing coordinates for cylinders. $\overline{C}$ is obtained by taking a closure in this space.\\
+
+To describe a point in $\overline{C}\backslash C$, do the following procedure:\\
+\begin{enumerate}
+\item Whenever an edge is borderline Delaunay and separates two cells, remove it and merge the cells it separates. Do it successively till there are no longer any edges that are borderline Delaunay. Now the only remaining borderline Delaunay edge must be those on long cylinders.
+\item Filtrate the cell complex according to the comparability of edge lengths.
+\item Make each level into a collection of a long cylinder or a meromorphic differential up to scaling, by realizing the cells as planar (possibly degenerate) polygons according to the direction and length ratio data, and glue then together. 
+\item Glue zeros to poles in a way so that the edges between components are preserved. Glue single poles according to the shearing coordinate.
+\end{enumerate}
+
+
+
+
+
+
+	
+
+\end{document}

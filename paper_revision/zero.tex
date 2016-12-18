@@ -1,0 +1,27 @@
+\documentclass[]{article}
+\usepackage{fullpage}
+\usepackage{amscd,amsmath,amsthm,amssymb,mathtools}
+\usepackage{mathrsfs}
+\usepackage{comment}
+\usepackage[all,cmtip]{xy}
+\usepackage{color}
+\begin{document}
+
+
+Let $F(X_1,X_2)=P(Y=1|X_1,X_2)$, and suppose the machine learning algorithm can capture $F$ perfectly,
+then the ROC of the permutation of the second type is
+$$\left(\sum_{F(a,b)>p}P(X_1=a,X_2=b|Y=0),1-\sum_{F(a,b)<p}P(X_1=a,X_2=b|Y=1)\right)$$
+And the ROC of the permutation of the first type is:
+$$\left(\sum_{F(a,b)>p}P(X_1=a|Y=0)P(X_2=b|Y=0),1-\sum_{F(a,b)<p}P(X_1=a|Y=1)P(X_2=b|Y=1)\right)$$
+
+Hence, the AUC of the first permutation is no worse than the second iff
+$$\int_0^1 \left(1-\sum_{F(a,b)<p}P(X_1=a|Y=1)P(X_2=b|Y=1)\right) d\left(\sum_{F(a,b)>p}P(X_1=a|Y=0)P(X_2=b|Y=0)\right)\geq$$
+$$ \int_0^1\left(1-\sum_{F(a,b)<p}P(X_1=a,X_2=b|Y=1)\right) d\left(\sum_{F(a,b)>p}P(X_1=a,X_2=b|Y=0)\right) $$
+
+In particular, the AUCs are the same if $X_1$ and $X_2$ are conditionally independent with regards to $Y$.
+
+
+
+	
+
+\end{document}
