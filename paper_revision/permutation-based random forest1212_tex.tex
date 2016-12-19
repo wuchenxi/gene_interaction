@@ -222,6 +222,28 @@ Return $C^2_G$ pairs of genes sorted by $\Delta AUC_{i,j}$ in decreasing order.
  \caption{gpXGB}
 \end{algorithm}
 
+\subsection{Interpretation of the algorithm}
+
+Let $F(X_1,X_2)=P(y=1|X_1,X_2)$, and suppose the machine learning algorithm can capture $F$ perfectly. Then, the expected ROC after the permutation of the second type is
+\begin{equation}
+\left(\sum_{F(a,b)>p}P(X_1=a,X_2=b|Y=0),1-\sum_{F(a,b)<p}P(X_1=a,X_2=b|Y=1)\right)
+\end{equation}
+while the expected ROC of the permutation of the first type is:
+\begin{equation}
+\left(\sum_{F(a,b)>p}P(X_1=a|Y=0)P(X_2=b|Y=0),1-\sum_{F(a,b)<p}P(X_1=a|Y=1)P(X_2=b|Y=1)\right)
+\end{equation}
+
+Hence, the expected $\Delta AUC$ is
+\begin{align*}
+&\int_0^1\left(1-\sum_{F(a,b)<p}P(X_1=a,X_2=b|Y=1)\right)\\
+& d\left(\sum_{F(a,b)>p}P(X_1=a,X_2=b|Y=0)\right)-\\
+&\int_0^1 \left(1-\sum_{F(a,b)<p}P(X_1=a|Y=1)P(X_2=b|Y=1)\right)\\
+& d\left(\sum_{F(a,b)>p}P(X_1=a|Y=0)P(X_2=b|Y=0)\right)
+\end{align*}
+
+In particular, the AUCs are the same if $X_1$ and $X_2$ are conditionally independent with regards to $Y$.
+
+
 \subsection{Simulation study}
 
 The goal of this simulation study is to evaluate the performance of gpXGB procedure for gene-gene interaction detection. All simulated datasets were set to have 50 SNPs. Among them 2 SNPs were functional and the remaining 48 SNPs were non-functional. The 50 SNPs formed 5 genes, each had 10 SNPs. The 2 functional SNPs were put into the first and second gene, and the performance is measured by how likely our algorithm can rank the two interacting genes as the most significant. We chose the publicly available tool GAMETES \cite{11} to generate the simulated genotype data. This tool is designed to generate epistasis models that we refer to as pure and strict. Purely and strictly epistasis models constitute the most difficult type of disease association model to detect, as such associations may be observed only if all n-loci are included in the disease model. This requirement makes these types of models an attractive gold standard for simulation studies of complex multi-locus effects. \\
