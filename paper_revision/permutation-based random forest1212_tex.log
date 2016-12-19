@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.10.1)  19 DEC 2016 17:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.10.1)  19 DEC 2016 19:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -710,26 +710,40 @@ File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
 zlibrarydecorations.markings.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
 decorations.markings.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
+\ttl@box=\box50
+\beforetitleunit=\skip69
+\aftertitleunit=\skip70
+\ttl@plus=\dimen191
+\ttl@minus=\dimen192
+\ttl@toksa=\toks48
+\titlewidth=\dimen193
+\titlewidthlast=\dimen194
+\titlewidthfirst=\dimen195
+)
 \c@thm=\count136
 \c@cor=\count137
 \c@defn=\count138
 \c@conj=\count139
 \c@rem=\count140
- (./permutation-based random forest1212_tex.aux)
+
+(./permutation-based random forest1212_tex.aux)
 \openout1 = `"permutation-based random forest1212_tex.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -767,92 +781,92 @@ LaTeX Font Info:    ... okay on input line 47.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count141
-\scratchdimen=\dimen191
-\scratchbox=\box50
+\scratchdimen=\dimen196
+\scratchbox=\box51
 \nofMPsegments=\count142
 \nofMParguments=\count143
-\everyMPshowfont=\toks48
+\everyMPshowfont=\toks49
 \MPscratchCnt=\count144
-\MPscratchDim=\dimen192
+\MPscratchDim=\dimen197
 \MPnumerator=\count145
 \makeMPintoPDFobject=\count146
-\everyMPtoPDFconversion=\toks49
+\everyMPtoPDFconversion=\toks50
 ) ABD: EveryShipout initializing macros
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.14} into 
 your preamble.
- on input line 47.
+ on input line 56.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 51.
+LaTeX Font Info:    Try loading font information for U+msa on input line 60.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 51.
+LaTeX Font Info:    Try loading font information for U+msb on input line 60.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (4.34467pt too wide) in paragraph at lines 59--60
+Overfull \hbox (4.34467pt too wide) in paragraph at lines 68--69
 \OT1/cmr/m/n/10.95 Genome-wide as-so-ci-a-tion stud-ies (GWAS) have iden-ti-fie
 d over six thou-sand single-nucleotide
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 63--64
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 92.
+(amsmath)                 on input line 101.
 
 <framework_of_gpXGB.pdf, id=26, 800.7516pt x 592.61403pt>
 File: framework_of_gpXGB.pdf Graphic file (type pdf)
 
 <use framework_of_gpXGB.pdf>
-Package pdftex.def Info: framework_of_gpXGB.pdf used on input line 97.
+Package pdftex.def Info: framework_of_gpXGB.pdf used on input line 106.
 (pdftex.def)             Requested size: 320.29497pt x 237.04141pt.
  [4 <./framework_of_gpXGB.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 137--151
+Underfull \hbox (badness 10000) in paragraph at lines 147--161
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 152--162
+Underfull \hbox (badness 10000) in paragraph at lines 162--172
 
  []
 
@@ -860,82 +874,80 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--179
+Underfull \hbox (badness 10000) in paragraph at lines 180--189
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 192--199
+Underfull \hbox (badness 10000) in paragraph at lines 202--209
 
  []
 
 [7]
-Overfull \hbox (16.23933pt too wide) detected at line 234
+Overfull \hbox (16.23933pt too wide) detected at line 244
 []
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--252
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 254--257
+Underfull \hbox (badness 10000) in paragraph at lines 264--267
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--259
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
-[10] <Rplot02.png, id=58, 653.44125pt x 752.8125pt>
+[10] <Rplot01.pdf, id=58, 451.6875pt x 602.25pt>
+File: Rplot01.pdf Graphic file (type pdf)
+ <use Rplot01.pdf>
+Package pdftex.def Info: Rplot01.pdf used on input line 277.
+(pdftex.def)             Requested size: 225.84319pt x 301.12425pt.
+
+<Rplot02.png, id=59, 653.44125pt x 752.8125pt>
 File: Rplot02.png Graphic file (type png)
  <use Rplot02.png>
-Package pdftex.def Info: Rplot02.png used on input line 267.
-(pdftex.def)             Requested size: 457.40576pt x 526.96515pt.
-
-Overfull \hbox (27.40114pt too wide) in paragraph at lines 267--268
- [] 
- []
-
-[11]
-Overfull \vbox (16.3321pt too high) has occurred while \output is active []
-
-
-[12 <./Rplot02.png>] [13] (./permutation-based random forest1212_tex.aux) ) 
+Package pdftex.def Info: Rplot02.png used on input line 283.
+(pdftex.def)             Requested size: 392.06776pt x 451.69098pt.
+ [11 <./Rplot01.pdf>] [12 <./Rplot02.png>] [13] (./permutation-based random for
+est1212_tex.aux) ) 
 Here is how much of TeX's memory you used:
- 24627 strings out of 494945
- 616213 string characters out of 6181032
+ 24913 strings out of 494945
+ 619920 string characters out of 6181032
  790486 words of memory out of 5000000
- 27481 multiletter control sequences out of 15000+600000
+ 27762 multiletter control sequences out of 15000+600000
  12627 words of font info for 47 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  62i,17n,96p,1218b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-</us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on "permutation-based random forest1212_tex.pdf" (13 pages, 3228
-83 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
+2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
+fb>
+Output written on "permutation-based random forest1212_tex.pdf" (13 pages, 2145
+779 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 121 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

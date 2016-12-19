@@ -15,6 +15,15 @@
 \usepackage[titlenumbered,ruled]{algorithm2e}
 \usetikzlibrary{arrows,positioning,calc,decorations.markings}
 \theoremstyle{plain}
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
 \newtheorem{thm}{Theorem}
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
@@ -58,7 +67,7 @@ Boosted tree is a popular and highly effective method in machine learning for mo
 
 Genome-wide association studies (GWAS) have identified over six thousand single-nucleotide polymorphisms (SNPs) associated with complex diseases or traits. Earlier GWAS analysis strategies were largely based on single locus models, which test the association between individual markers and a given phenotype independently. Although this type of approaches have successfully identified many regions of disease susceptibility, most of these SNPs identified have small effect sizes which failed to fully account for the heritability of complex traits. Genetic interaction has been hypothesized to play an important role in the genetic basis of complex diseases and traits and to be one of the possible solutions to this problem of ``missing heritability''. Even if genetic interaction explains only a tiny fraction of ``missing heritability'', they can still provide some biological insight on the pathway level through by aiding the construction of novel gene pathway topologies.\\
 
-The first investigations on genetic interactions have been at the SNP level, in which various statistical methods, including logic and logistic regression, odds-ratio, linkage disequilibrium(LD) and entropy-based statistic, are employed to detect SNP-SNP interactions (i.e. epistasis). Other techniques that have been used to study SNP-SNP interactions include multifactor dimensionality reduction, Tuning RelieF, Random Jungle, BEAM, BOOST\cite{1} and pRF\cite{2}. These marker-based methods may encounter some common challenges, such as the complexity arising from the large number of pairwise or higher-order tests because all pairs or groups of SNPs have to be considered; and the extensive burden of multiple-testing correction they entail. {\color{red}what is this} In this paper, we aim to improve the power of gene-gene interaction detection by moving beyond SNP level, and instead consider all potential pairs of SNPs from each of a pair of genes in a single gene-based interaction detection.\\
+The first investigations on genetic interactions have been at the SNP level, in which various statistical methods, including logic and logistic regression, odds-ratio, linkage disequilibrium(LD) and entropy-based statistic, are employed to detect SNP-SNP interactions (i.e. epistasis). Other techniques that have been used to study SNP-SNP interactions include multifactor dimensionality reduction, Tuning RelieF, Random Jungle, BEAM, BOOST\cite{1} and pRF\cite{2}. These marker-based methods may encounter some common challenges, such as the complexity arising from the large number of pairwise or higher-order tests because all pairs or groups of SNPs have to be considered; and the extensive burden of correction they entail due to multiple testing. In this paper, we aim to improve the power of gene-gene interaction detection by moving beyond SNP level, and instead consider all potential pairs of SNPs from each of a pair of genes in a single gene-based interaction detection.\\
 
 Gene-based approaches have been successful for regular GWAS tests of main (marginal) associations, and there are several potential advantages in extending this methodology to gene-gene interaction detections. Firstly, a gene-based approach can substantially reduce the number of tests needed. For example, for 20,000 genes, there are $\sim 2\times 10^8$ possible pairwise gene-based interactions to be tested, while for 3 million SNPs there are over $\sim 5\times 10^{12}$ possible marker-based interactions to be tested. Secondly, a gene-based interaction test may have greater power, because when there are multiple interactions between features in the targeted genes (or other kind of regions), the effect of these interactions may be aggregated by the algorithm. Such aggregation has already been seen in gene-based GWAS tests for main association effect. Thirdly, a gene-based approach may be better at leveraging prior biological knowledge, which is often on the level of genes. For example, one may test pairs of genes that exhibit protein-protein interactions (PPI) or that participate in the same pathways.\\
 
@@ -70,7 +79,7 @@ In this paper, rather than designing a new dedicated statistic, we use a machine
 \section{Materials and Methods}
 
 
-In this section we first detail the gpXGB approach. Then we describe the various simulation studies conducted to assess the type-I error rate as well as the statistical power of our approach in gene-gene interaction detection. Finally, we apply our approach to the{\color{red} NESDA ()} dataset to evaluate our approach in a real-lift situation.
+In this section we first detail the gpXGB approach. Then we describe the various simulation studies conducted to assess the type-I error rate as well as the statistical power of our approach in gene-gene interaction detection. Finally, we apply our approach to the WTCCC dataset to evaluate our approach in a real-lift situation.
 
 \subsection{Overview of gpXGB}
 
@@ -80,11 +89,11 @@ We choose Xgboost as our classifier because gradient boosting decision tree (GBD
 
 Our approach consists of three steps: 1) training 2) permutation 3) testing and ranking. We start by training an Xgboost model with all the genes in the gene list and use cross-validation to choose a best model and save it. Then, for each selected pair of genes, we use our permutation strategies to generate two different test datasets, one keep while the other remove the interaction between the selected pair of genes. Lastly, we calculate the performance difference $\Delta AUC$ for the two test datasets on the well-trained model. Which we use as a measurement for the strength of interaction between these two genes. The various steps of the gpXGB framework are illustrated in Figure1.
 
-\subsection{Overview of Xgboost}
+\subsubsection{Overview of Xgboost}
 
 Xgboost \cite{9} is a scalable supervised machine learning system based on tree boosting, and recently has been dominating applied machine learning as well as in Kaggle competitions. It is an algorithm which improves GBDT with speed and performance improvement.
 
-\subsubsection{Ensemble of CARTs}
+\paragraph{Ensemble of CARTs}
 In this ensemble model, the base classifier is CART (Classifying And Regression Tree), which is similar to decision trees, but on each leaf, instead of a classification, a real-valued score is assigned. This makes ensemble training easier and may also provide more information beyond classification.\\
 
 Let $\mathcal{F}$ be the space of functions that can be represented by CARTs, the ensemble predictor is $\hat{y}=\sum_k f_k, f_k\in\mathcal{F}$. In our case we interpret it as in logistic regression, namely
@@ -105,7 +114,7 @@ obj=\sum_i(l(y_i,\hat{y}(x_i))+\sum_k\Omega(f_k)
 \end{equation}
 Where $l(y,\hat{y})=y\log(1+e^{-\hat{y}})+(1-y)\log(1+e^{\hat{y}})$ is the logistic regression loss function, and $\Omega(f_k)$ is the regularizer.
 
-\subsubsection{Gradient Boosting}
+\paragraph{Gradient Boosting}
 It is not feasible to train all the trees in the ensemble together at once because it is hard to calculate the gradient as which is needed in traditional optimization methods. Instead, Xgboost use an additive training strategy: fix the trees have already learned, add new trees one at a time. Let $\hat{y}^{(t)}$ be the
 predictor at iteration $t$, then
 \begin{equation}
@@ -119,7 +128,8 @@ Where $f_t\in\mathcal{F}$ optimizes the following target function, which is obta
 obj^t=\sum_i\left(g_i(\hat{y}^{(t-1)}(x_i))f_t(x_i)+{h_i^2(\hat{y}^{(t-1)}(x_i))\over 2}\cdot f_t^2(x_i)\right)+\Omega(f_i)
 \end{equation}
 Here $g_i(\hat{y})={d\over d\hat{y}}l(y_i,\hat{y})$, $h_i(\hat{y})={d\over d\hat{y}}l(y_i,\hat{y})$.
-\subsubsection{Regularizer and Training strategy for CARTs}
+
+\paragraph{Regularizer and Training strategy for CARTs}
 
 For any $f\in\mathcal{F}$ , let $T$ be the number of leaves in the tree representing $f$ , $w_1,\dots, w_T$ be the scores on
 the leaves. Then the regularizer used in XGBoost is
@@ -132,7 +142,7 @@ To optimize $f_t$, firstly note that given a tree structure, $obj^t$ is a quadra
 and the minimum of $obj^t$ as well as the $w_j$ that minimizes $obj^t$ can be easily calculated given the tree structure. Now the tree can be constructed by a greedy algorithm in which one starts with a tree with
 one single node, and repeatedly split its leaves in a way that maximizes the decrease in $obj^t$ in each step.
 
-\subsection{Permutation}
+\subsubsection{Permutation}
 
 The idea of detecting SNP interaction through permutation has previously been used by Greene \cite{10}
 and Jing \cite{2}.Greene et al. designed an explicit test of epistasis to reflect only nonlinear interaction
@@ -165,7 +175,7 @@ hence is more suitable for detecting interaction between genes. Also, in selecti
 we used a forward selection strategy instead of the backward selection strategy used by Jing etc.
 (emphasize the difference between our permutation and Jing’s)
 
-\subsection{Testing and Ranking}
+\subsubsection{Testing and Ranking}
 
 Our approach for gene-based gene-gene interaction detection is based on comparing the
 performance of a model trained with XGBoost (c.f. section 2.2) on two test datasets obtained
@@ -222,7 +232,7 @@ Return $C^2_G$ pairs of genes sorted by $\Delta AUC_{i,j}$ in decreasing order.
  \caption{gpXGB}
 \end{algorithm}
 
-\subsection{Interpretation of the algorithm}
+\subsubsection{Interpretation of the algorithm}
 
 Let $F(X_1,X_2)=P(y=1|X_1,X_2)$, and suppose the machine learning algorithm can capture $F$ perfectly. Then, the expected ROC after the permutation of the second type is
 \begin{equation}
@@ -264,7 +274,13 @@ The performance of our procedure gpXGB was compared to three previously publishe
 
 \begin{figure}[H]
     \begin{center}
-       \includegraphics[scale=0.7]{Rplot02.png}
+       \includegraphics[scale=0.5]{Rplot01}
+    \end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+       \includegraphics[scale=0.6]{Rplot02.png}
     \end{center}
 \end{figure}
 
