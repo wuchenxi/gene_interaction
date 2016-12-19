@@ -268,21 +268,30 @@ phenotype ($p<1\times 10^{-4}$). We further filter out SNPs that are not in Hard
 In a second analysis, we aim to verify some gene-gene interaction in the RA pathway hsa05323 in KEGG pathway dataset. Genotyping coordinates are given in NCBI Build36/UCSC hg18 (National Center for Biotechnology Information, Bethesda, MD). There are XX genes in the pathway, and we can mapping XX based on Build36 annotation. For each gene, we add 10k to both the upstream and downstream. Gender was included as covariate in the analysis. Principal component analysis was conducted using GCAT[], and top 10 PCs were also included as covariates to account for potential population stratification.\\
 
 \subsection{Competitive methods}
-The performance of our procedure gpXGB was compared to three previously published methods: Kernel Canonical Correlation-based U-statistic analysis (KCCU)\cite{4, 5}, the gene-based information gain method (GBIGM)\cite{6} and A Gene-based Gene-Gene interaction test method (AGGrEGATOr)\cite{7}. We adapted them to the task of ranking.
+The performance of our procedure gpXGB was compared to three previously published methods: Kernel Canonical Correlation-based U-statistic analysis (KCCU)\cite{4, 5}, the gene-based information gain method (GBIGM)\cite{6} and A Gene-based Gene-Gene interaction test method (AGGrEGATOr)\cite{7}. We adapted them to the task of ranking, by ranking the gene pairs by their p-values in ascending order.
 
 \section{Results}
 
-\begin{figure}[H]
-    \begin{center}
-       \includegraphics[scale=0.5]{Rplot01}
-    \end{center}
-\end{figure}
+\subsection{Results for the simulation study}
+
+Figure~\ref{det} shows the performance of gpXGB and various other approaches on the simulated datasets with different heritability. Figure~\ref{avg} shows the relationship between heritability and the average performance. Here, the number for ``gpXGB'' is the relative frequency for gpXGB to rank the single interacting gene pair as the first, and ``gpXGB\_under 0.01'' is the relative frequency for two runs of the gpXGB both ranking the single interacting gene pair as the first. For all other methods, the number listed is the relative frequency for the single interacting pair to have the smallest p-value.
 
 \begin{figure}[H]
     \begin{center}
        \includegraphics[scale=0.6]{Rplot02.png}
     \end{center}
+\caption{\label{det}Performance on the simulated datasets}
 \end{figure}
+
+\begin{figure}[H]
+    \begin{center}
+       \includegraphics[scale=0.5]{Rplot01}
+    \end{center}
+\caption{\label{avg}Average performance on the simulated datasets}
+\end{figure}
+
+As can be seen in Figure~\ref{avg}, the performance of $gpXGB$ increases with the heritability.
+
 
 \section{Discussion}
 

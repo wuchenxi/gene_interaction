@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.10.1)  19 DEC 2016 19:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.10.1)  19 DEC 2016 20:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -908,24 +908,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
-[10] <Rplot01.pdf, id=58, 451.6875pt x 602.25pt>
-File: Rplot01.pdf Graphic file (type pdf)
- <use Rplot01.pdf>
-Package pdftex.def Info: Rplot01.pdf used on input line 277.
-(pdftex.def)             Requested size: 225.84319pt x 301.12425pt.
-
-<Rplot02.png, id=59, 653.44125pt x 752.8125pt>
+[10] <Rplot02.png, id=58, 653.44125pt x 752.8125pt>
 File: Rplot02.png Graphic file (type png)
  <use Rplot02.png>
-Package pdftex.def Info: Rplot02.png used on input line 283.
+Package pdftex.def Info: Rplot02.png used on input line 281.
 (pdftex.def)             Requested size: 392.06776pt x 451.69098pt.
- [11 <./Rplot01.pdf>] [12 <./Rplot02.png>] [13] (./permutation-based random for
+ [11]
+<Rplot01.pdf, id=62, 451.6875pt x 602.25pt>
+File: Rplot01.pdf Graphic file (type pdf)
+ <use Rplot01.pdf>
+Package pdftex.def Info: Rplot01.pdf used on input line 288.
+(pdftex.def)             Requested size: 225.84319pt x 301.12425pt.
+ [12 <./Rplot02.png>] [13 <./Rplot01.pdf>] [14] (./permutation-based random for
 est1212_tex.aux) ) 
 Here is how much of TeX's memory you used:
- 24913 strings out of 494945
- 619920 string characters out of 6181032
+ 24916 strings out of 494945
+ 619948 string characters out of 6181032
  790486 words of memory out of 5000000
- 27762 multiletter control sequences out of 15000+600000
+ 27765 multiletter control sequences out of 15000+600000
  12627 words of font info for 47 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  62i,17n,96p,1218b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -943,11 +943,11 @@ ts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type
 s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
 fb>
-Output written on "permutation-based random forest1212_tex.pdf" (13 pages, 2145
-779 bytes).
+Output written on "permutation-based random forest1212_tex.pdf" (14 pages, 2147
+244 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
+ 124 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
