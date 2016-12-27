@@ -190,7 +190,17 @@ technique is based on the following observation: if Equation (1) is satisfied fo
 \end{equation*}
 \begin{equation}=\mathcal{P}(X'_g,X_{g'},X_0)\mathcal{P}(X_g,X'_{g'},X'_0)\mathcal{P}(X'_g,X_{g'},X'_0)\mathcal{P}(X_g,X'_{g'},X_0)
 \end{equation}
-Under the assumption that the result of $XGBoost$ may serve as an estimator of the conditional distribution of $y$, we propose our ranking algorithm as follows: 
+To verify that, note that if $\mathcal{P}(X_g, X_{g'}, X_0)=F_g(X_g, X_0)F_{g'}(X_{g'},X_0)$, then the left-hand-side of equation (8) above becomes:
+$F_g(X_g,X_0)F_{g'}(X_{g'},X_0)F_g(X'_g,X'_0)F_{g'}(X'_{g'},X'_0)F_g(X'_g,X_0)\\F_{g'}(X'_{g'},X_0)F_g(X_g,X'_0)F_{g'}(X_{g'},X'_0)$, 
+while the right-hand-side becomes:
+$F_g(X'_g,X_0)F_{g'}(X_{g'},X_0)\\F_g(X_g,X'_0)F_{g'}(X'_{g'},X'_0)F_g(X'_g,X'_0)F_{g'}(X_{g'},X'_0)F_g(X_g,X_0)F_{g'}(X'_{g'},X_0)$
+Hence it is evident that they're the same.\\
+
+This observation is motivated by the well-known fact that a function $f(X,Y)$ is of the form $f(X,Y)=u(X)v(Y)$ if and only if for any $a,b,c,d$, $f(a,b)f(c,d)=f(a,d)f(c,b)$.\\
+
+As the function $\mathcal{P}$ is unknown, we use the predicted probability of XgBoost as an estimator of it. We test equation (8) on a testing set drawn from the same original sample set as the training set we used to train XgBoost model, because we want the distribution of the genotypes tested to be closer to the distribution of the genotype of the training data, as in this case the predicted probability might be assumed to be more reliable.\\
+
+With the considerations above, we propose our ranking algorithm as follows: 
 
 \begin{algorithm}[H]
 \SetAlgoLined
