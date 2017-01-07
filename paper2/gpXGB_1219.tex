@@ -107,7 +107,7 @@ Let $\mathcal{F}$ be the space of functions that can be represented by CARTs, th
 p(y=1|x)={1\over 1+e^{-\hat{y}(x)}}
 \end{equation}
 
-\begin{figure}[H]
+\begin{figure}[h]
     \begin{center}
        \begin{tikzpicture}
 \draw [fill=red,red] (0,5) rectangle (1,5.6);
@@ -143,14 +143,11 @@ p(y=1|x)={1\over 1+e^{-\hat{y}(x)}}
 \draw[->](1.5,7)--(1.5,6);
 \draw[-] (4,7) rectangle (7,8);
 \node at (5.5,7.5) {Training data};
-\draw[-] (4,0.6) rectangle (7,4);
-\draw[-] (4,5) rectangle (7,6);
-\node at (5.5, 5.6) {Model Selection};
-\draw[->](5.5,5)--(5.5,4);
-\node at (5.5, 2.3) {XgBoost Training};
+\draw[-] (4,0.6) rectangle (7,6);
+\node at (5.5, 3) {XgBoost Training};
 \draw[->] (5.5,7)--(5.5,6);
 \draw[-] (2, 8.5)rectangle (5,9.5);
-\node at (3.5,9) {Samples};
+\node at (3.5,9) {Model selection};
 \draw[->](3,8.5)--(1.5,8);
 \draw[->](4,8.5)--(5.5,8);
 \draw[-](5.5,0.6)--(5.5,0)--(1.5,0);
@@ -194,40 +191,6 @@ The purpose of the second term is that it can smoothen the leaf scores.
 To optimize $f_t$, firstly note that given a tree structure, $obj^t$ is a quadratic function of the scores $w_j$,
 and the minimum of $obj^t$ as well as the $w_j$ that minimizes $obj^t$ can be easily calculated given the tree structure. Now the tree can be constructed by a greedy algorithm in which one starts with a tree with
 one single node, and repeatedly split its leaves in a way that maximizes the decrease in $obj^t$ in each step.
-
-% \subsubsection{Permutation}
-
-% The idea of detecting SNP interaction through permutation has previously been used by Greene \cite{10}
-% and Jing \cite{2}.Greene et al. designed an explicit test of epistasis to reflect only nonlinear interaction
-% or epistasis component of the model. They advanced the traditional permutation testing framework
-% by shuffling each SNP column instead of randomizing the class label, which can generate permuted
-% datasets for testing the null hypothesis that the only genetic associations in the data are linear or
-% additive in nature and that any nonlinear interaction effects are only there by chance. This yields an
-% explicit test of epistasis when combining with a method such as MDR, is capable of modeling
-% nonlinear interactions. Jing et al. developed a permuted Random Forest (pRF) method. They
-% generated two test dataset by permutating the genotype of a pair of SNPs. In one dataset the SNPs
-% are shuffled independently, while in the other they are shuffled as a pair hence keeping the pairwise
-% association. The difference of error rate between the two test dataset on a well-trained RF model is
-% then used to measure the strength of the interaction of selected SNP pair. Other SNPs except for the
-% selected pair kept their original form in both dataset, so the interactions among other non-selected
-% SNPs were preserved in both of the permutation framework.\\
-
-% Both methods above are marker-based. Motivated by them, we designed a gene-based permutation
-% strategy for our interaction detection. For each pair of genes, we carried out two permutation
-% strategies to generate two test datasets. Firstly, we divide the samples by class label into case and
-% control groups. Then, in the first permutation strategy, we shuffle the genotype of all the genes
-% independently among the samples within each group, which removes all associations between geneswithin each group while keeping the association between SNPs within each gene. The independent
-% margin effect of each gene is preserved due to the unchanged genotype frequencies of each gene
-% within each group before and after permutation. In the second permutation strategy, within both the
-% case and the control group, the genotypes of the two chosen genes are shuffled together as a group
-% while the genotypes of all other genes are shuffled independently. Hence, the difference between
-% the two test dataset is merely the presentation or deletion of the interaction between the pair of genes.\\
-
-% Comparing with the approach of Jing etc., our approach is gene-based as opposed to marker-based,
-% hence is more suitable for detecting interaction between genes. Also, in selecting interaction terms
-% we used a forward selection strategy instead of the backward selection strategy used by Jing etc.
-% (emphasize the difference between our permutation and Jing’s)
-
 \subsubsection{Testing and Ranking}
 
 Our approach for gene-based gene-gene interaction detection is based testing the extend a model trained with XGBoost (c.f. section 2.2) deviate from the ``product form'' in Equation (1). Our interaction estimation
@@ -245,9 +208,9 @@ It is evident that these two are the same.\\
 
 This observation is motivated by the well-known fact that a function $f(X,Y)$ is of the form $f(X,Y)=u(X)v(Y)$ if and only if for any $a,b,c,d$, $f(a,b)f(c,d)=f(a,d)f(c,b)$.\\
 
-As the function $\mathcal{P}$ is unknown, we use the predicted probability of XgBoost as an estimator of it. We test equation (8) on a testing set drawn from the same original sample set as the training set we used to train XgBoost model, because we want the distribution of the genotypes tested to be closer to the distribution of the genotype of the training data in order to minimize the error caused by interpolation.\\
+As the function $\mathcal{P}$ is unknown, we use the predicted probability of XgBoost as an estimator of it. When testing equation (8), we want the distribution of the genotypes tested to be close to the geenotypes we used to train the model to minimize error caused by interpolation. On the other hand, we don't want them to be completely identical because the learned probability may ill-behave at those places (c.f. \cite{13}). Hence, after model selection, we randomly split the available sample set into two, using the first to train our model and the second to generate the genotypes for testing equation (8).\\
 
-With the considerations above, we propose our ranking algorithm as follows: 
+Hence, with the considerations above, we propose our ranking algorithm as follows: 
 
 \begin{algorithm}[H]
 \SetAlgoLined
@@ -276,6 +239,9 @@ $Predict(XgBoostModel, {X^G}^i)Predict(XgBoostModel, {X^H}^i))$
 Return $C^2_G$ pairs of genes sorted by the total $\Delta P_{g,g'}$ in all $N$-iterations in decreasing order.
  \caption{gpXGB}
 \end{algorithm}
+
+Because the first step is time consuming, in the simulated study, we did model selection for only one sample set and used the resulted parameters for the entire experiment.
+
 
 % \subsubsection{Interpretation of the algorithm}
 
