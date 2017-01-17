@@ -107,53 +107,10 @@ Let $\mathcal{F}$ be the space of functions that can be represented by CARTs, th
 p(y=1|x)={1\over 1+e^{-\hat{y}(x)}}
 \end{equation}
 
-\begin{figure}[h]
-    \begin{center}
-       \begin{tikzpicture}
-\draw [fill=red,red] (0,5) rectangle (1,5.6);
-\draw [fill=red,red] (0,3) rectangle (1,3.6);
-\draw [fill=red,red] (0,2) rectangle (1,2.6);
-\draw [fill=red,red] (0,1) rectangle (1,1.6);
-\draw [fill=blue,blue] (2,5) rectangle (3,5.6);
-\draw [fill=blue,blue] (2,3) rectangle (3,3.6);
-\draw [fill=blue,blue] (2,2) rectangle (3,2.6);
-\draw [fill=blue,blue] (2,1) rectangle (3,1.6); 
-\node at (-0.2,5.3){$A$};
-\node at (-0.2,3.3){$C$};
-\node at (-0.2,2.3){$E$};
-\node at (-0.2,1.3){$F$};
-\node at (3.2,5.3){$B$};
-\node at (3.2,3.3){$D$};
-\node at (3.2,2.3){$G$};
-\node at (3.2,1.3){$H$};
-\draw[thick,blue](0.2,3.6)--(0.2,3);
-\draw[thick,blue](0.4,3.6)--(0.4,3);
-\draw[thick,blue](0.2,2.6)--(0.2,2);
-\draw[thick,blue](0.4,1.6)--(0.4,1);
-\draw[thick,red](2.2,3.6)--(2.2,3);
-\draw[thick,red](2.4,3.6)--(2.4,3);
-\draw[thick,red](2.2,2.6)--(2.2,2);
-\draw[thick,red](2.4,1.6)--(2.4,1);
-\draw[dashed] (-0.5,0.6) rectangle (3.5, 4);
-\draw[dashed](-0.5,4.6) rectangle (3.5, 6);
-\draw[dashed](-0.6,0.4)rectangle(3.6,6.3);
-\draw[->](1.5,4.6)--(1.5,4);
-\draw[-] (0,7) rectangle (3,8);
-\node at (1.5,7.5) {Testing data};
-\draw[->](1.5,7)--(1.5,6);
-\draw[-] (4,7) rectangle (7,8);
-\node at (5.5,7.5) {Training data};
-\draw[-] (4,0.6) rectangle (7,6);
-\node at (5.5, 3) {XgBoost Training};
-\draw[->] (5.5,7)--(5.5,6);
-\draw[-] (2, 8.5)rectangle (5,9.5);
-\node at (3.5,9) {Model selection};
-\draw[->](3,8.5)--(1.5,8);
-\draw[->](4,8.5)--(5.5,8);
-\draw[-](5.5,0.6)--(5.5,0)--(1.5,0);
-\draw[->](1.5,0)--(1.5,0.4);
-\node at (3.5,-0.3) {Evaluate};
-\end{tikzpicture}
+\begin{figure}[H]
+\begin{center}
+       \includegraphics[scale=0.5]{workflow_geXGB1}
+       \includegraphics[scale=0.5]{workflow_geXGB2}
     \end{center}
 \caption{\label{fig1} The framework of gpXGB}
 \end{figure}

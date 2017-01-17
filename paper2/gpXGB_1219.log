@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2016.10.1)  7 JAN 2017 03:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.1.15)  17 JAN 2017 17:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -848,11 +848,29 @@ Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 107.
 
+<workflow_geXGB1.pdf, id=27, 844.95674pt x 597.432pt>
+File: workflow_geXGB1.pdf Graphic file (type pdf)
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+<use workflow_geXGB1.pdf>
+Package pdftex.def Info: workflow_geXGB1.pdf used on input line 112.
+(pdftex.def)             Requested size: 422.47734pt x 298.71527pt.
 
-[4] [5]
-Overfull \hbox (14.61952pt too wide) in paragraph at lines 202--208
+<workflow_geXGB2.pdf, id=28, 844.95674pt x 597.432pt>
+File: workflow_geXGB2.pdf Graphic file (type pdf)
+
+<use workflow_geXGB2.pdf>
+Package pdftex.def Info: workflow_geXGB2.pdf used on input line 113.
+(pdftex.def)             Requested size: 422.47734pt x 298.71527pt.
+ [4]
+Overfull \vbox (79.68315pt too high) has occurred while \output is active []
+
+
+[5 <./workflow_geXGB1.pdf> <./workflow_geXGB2.pdf
+
+pdfTeX warning: pdflatex (file ./workflow_geXGB2.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+>] [6]
+Overfull \hbox (14.61952pt too wide) in paragraph at lines 159--165
 \OT1/cmr/m/n/10.95 side of equa-tion (8) above be-comes: $\OML/cmm/m/it/10.95 F
 []\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[]; X[]\OT1/cmr/m/n/10.95 )\OML/cmm/
 m/it/10.95 F[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[]; X[]\OT1/cmr/m/n/10.9
@@ -863,7 +881,7 @@ m/it/10.95 X[]; X[]\OT1/cmr/m/n/10.95 )[]
  []
 
 
-Overfull \hbox (23.62799pt too wide) in paragraph at lines 202--208
+Overfull \hbox (23.62799pt too wide) in paragraph at lines 159--165
 \OML/cmm/m/it/10.95 F[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[]; X[]\OT1/cmr
 /m/n/10.95 )\OML/cmm/m/it/10.95 F[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[];
  X[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 F[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/i
@@ -874,63 +892,63 @@ n/10.95 )\OML/cmm/m/it/10.95 F[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 X[]; X[
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--208
+Underfull \hbox (badness 10000) in paragraph at lines 159--165
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--210
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--212
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 270--271
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 272--273
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 275--278
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 279--280
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
 
  []
 
-<Rplot02.png, id=46, 653.44125pt x 752.8125pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--235
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
+
+ []
+
+<Rplot02.png, id=113, 653.44125pt x 752.8125pt>
 File: Rplot02.png Graphic file (type png)
  <use Rplot02.png>
-Package pdftex.def Info: Rplot02.png used on input line 292.
+Package pdftex.def Info: Rplot02.png used on input line 249.
 (pdftex.def)             Requested size: 392.06776pt x 451.69098pt.
- [9]
-<Rplot01.pdf, id=50, 451.6875pt x 602.25pt>
+ [10]
+<Rplot01.pdf, id=117, 451.6875pt x 602.25pt>
 File: Rplot01.pdf Graphic file (type pdf)
  <use Rplot01.pdf>
-Package pdftex.def Info: Rplot01.pdf used on input line 299.
+Package pdftex.def Info: Rplot01.pdf used on input line 256.
 (pdftex.def)             Requested size: 225.84319pt x 301.12425pt.
- [10 <./Rplot02.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+ [11 <./Rplot02.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
-[11 <./Rplot01.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+[12 <./Rplot01.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
 
  []
 
@@ -943,15 +961,15 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
-[12] [13] (./gpXGB_1219.aux) ) 
+[13] [14] (./gpXGB_1219.aux) ) 
 Here is how much of TeX's memory you used:
- 24960 strings out of 494945
- 620793 string characters out of 6181032
- 793485 words of memory out of 5000000
- 27812 multiletter control sequences out of 15000+600000
+ 24918 strings out of 494945
+ 619750 string characters out of 6181032
+ 793486 words of memory out of 5000000
+ 27768 multiletter control sequences out of 15000+600000
  12006 words of font info for 45 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 62i,15n,96p,1187b,657s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,15n,96p,1187b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
@@ -967,10 +985,10 @@ blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i10.pfb>
-Output written on gpXGB_1219.pdf (13 pages, 2050192 bytes).
+Output written on gpXGB_1219.pdf (14 pages, 2250886 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 185 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
