@@ -33,6 +33,11 @@ def extract_data(filename):
   train_data_label = np.array(train_data_label)
   swap_column(train_data_label,0,48)
   swap_column(train_data_label,10,49)
+  train_data_label = train_data_label[:,[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,
+                                         16,17,18,19,0,1,2,3,4,5,6,7,8,9,10,11,
+                                         12,13,14,15,16,17,18,19,50]]
+  np.random.shuffle(train_data_label[:,20:29])
+  np.random.shuffle(train_data_label[:,30:39])
   return train_data_label
 
 
