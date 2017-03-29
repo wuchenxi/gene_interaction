@@ -6,13 +6,6 @@ import csv
 from operator import add
 
 
-def swap_column(data, col1, col2):
-  """ Swap two columns of a matrix """
-  tmp = data[:,col1].tolist()
-  data[:,col1] = data[:,col2]
-  data[:,col2] = tmp
-  return data
-
 
 
 def inlabel_shuffle(data):
@@ -97,10 +90,14 @@ def do_test(raw_data, model, starts, ends):
         f[:,starts[i]:ends[i]+1]=a[:,starts[i]:ends[i]+1]
         g[:,starts[j]:ends[j]+1]=b[:,starts[j]:ends[j]+1]
         h[:,starts[j]:ends[j]+1]=a[:,starts[j]:ends[j]+1]
-        sum1 = model.predict(xgb.DMatrix(a[:,:-1]))*model.predict(xgb.DMatrix(b[:,:-1]))*model.predict(xgb.DMatrix(c[:,:-1]))*model.predict(xgb.DMatrix(d[:,:-1])) 
-        sum2 = model.predict(xgb.DMatrix(e[:,:-1]))*model.predict(xgb.DMatrix(f[:,:-1]))*model.predict(xgb.DMatrix(g[:,:-1]))*model.predict(xgb.DMatrix(h[:,:-1])) 
-        print i, j, np.sum(np.absolute(sum1-sum2))
-        delta_auc.append(np.sum(np.absolute(sum1-sum2)))
+        pa = model.predict(xgb.DMatrix(a[:,:-1]))
+        pb = model.predict(xgb.DMatrix(b[:,:-1]))
+        sum1 = pa*pb*model.predict(xgb.DMatrix(c[:,:-1]))*model.predict(xgb.DMatrix(d[:,:-1])) 
+        sum2 = model.predict(xgb.DMatrix(e[:,:-1]))*model.predict(xgb.DMatrix(f[:,:-1])) \
+               *model.predict(xgb.DMatrix(g[:,:-1]))*model.predict(xgb.DMatrix(h[:,:-1]))
+        diff = np.sum(np.absolute(sum1-sum2)*(pa*a[:,-1]+(1-pa)*(1-a[:,-1]))* \
+                      (pb*b[:,-1]+(1-pb)*(1-b[:,-1])))
+        delta_auc.append(diff)
 
   return delta_auc
         
