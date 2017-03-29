@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.3.20)  29 MAR 2017 16:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.3.20)  29 MAR 2017 16:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -992,58 +992,53 @@ Overfull \hbox (76.97333pt too wide) in paragraph at lines 190--191
  [] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 195--201
-
- []
-
-[8 <./exchange.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
+[9 <./exchange.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 259--260
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--264
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 265--266
+Underfull \hbox (badness 10000) in paragraph at lines 255--257
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 274--275
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
 
 
-Overfull \hbox (29.68607pt too wide) in paragraph at lines 279--369
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
+
+ []
+
+
+Overfull \hbox (29.68607pt too wide) in paragraph at lines 272--362
  [][] 
  []
 
 [12]
-Overfull \hbox (2.49855pt too wide) in paragraph at lines 374--392
+Overfull \hbox (2.49855pt too wide) in paragraph at lines 367--385
  [][] 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 426--427
+Underfull \hbox (badness 10000) in paragraph at lines 419--420
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 428--429
+Underfull \hbox (badness 10000) in paragraph at lines 421--422
 
  []
 
@@ -1051,27 +1046,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 428--429
 File: boxplot_10simu.jpg Graphic file (type jpg)
 
 <use boxplot_10simu.jpg>
-Package pdftex.def Info: boxplot_10simu.jpg used on input line 436.
+Package pdftex.def Info: boxplot_10simu.jpg used on input line 429.
 (pdftex.def)             Requested size: 392.06776pt x 451.69098pt.
  [15]
 <average0204.jpg, id=137, 653.44125pt x 752.8125pt>
 File: average0204.jpg Graphic file (type jpg)
  <use average0204.jpg>
-Package pdftex.def Info: average0204.jpg used on input line 443.
+Package pdftex.def Info: average0204.jpg used on input line 436.
 (pdftex.def)             Requested size: 326.71982pt x 376.40532pt.
 
 [16 <./boxplot_10simu.jpg>] [17 <./average0204.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 466--467
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 468--469
+Underfull \hbox (badness 10000) in paragraph at lines 461--462
 
  []
 
 
-Overfull \hbox (3.5855pt too wide) in paragraph at lines 470--471
+Overfull \hbox (3.5855pt too wide) in paragraph at lines 463--464
 \OT1/cmr/m/n/10.95 We ap-plied the pro-posed meth-ods to eval-u-ate for gene-le
 vel in-ter-ac-tions un-der-ly-ing Rheuma-
  []
@@ -1106,7 +1101,7 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on gpXGB_1219.pdf (20 pages, 747448 bytes).
+Output written on gpXGB_1219.pdf (20 pages, 747498 bytes).
 PDF statistics:
  212 PDF objects out of 1000 (max. 8388607)
  135 compressed objects within 2 object streams
