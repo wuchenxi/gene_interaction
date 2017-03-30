@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.1.11)  29 MAR 2017 23:05
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.1.11)  30 MAR 2017 23:17
 entering extended mode
 **gpXGB_1219.tex
 (D:\papers\gene_based_inter_qualitative\gene_interaction\paper3\gpXGB_1219.tex
@@ -863,15 +863,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
-<framework_0116.pdf, id=26, 844.95674pt x 597.432pt>
-File: framework_0116.pdf Graphic file (type pdf)
- <use framework_0116.pdf>
-Package pdftex.def Info: framework_0116.pdf used on input line 107.
-(pdftex.def)             Requested size: 506.97795pt x 358.46196pt.
-
-Overfull \hbox (76.97333pt too wide) in paragraph at lines 107--108
- [] 
- []
+<framework_0116.png, id=26, 544.434pt x 503.481pt>
+File: framework_0116.png Graphic file (type png)
+ <use framework_0116.png>
+Package pdftex.def Info: framework_0116.png used on input line 107.
+(pdftex.def)             Requested size: 326.66292pt x 302.09093pt.
 
 [4]
 Underfull \hbox (badness 10000) in paragraph at lines 117--118
@@ -879,7 +875,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--118
  []
 
 [5 <D:/papers/gene_based_inter_qualitative/gene_interaction/paper3/framework_01
-16.pdf>]
+16.png>]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
@@ -905,28 +901,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
-[7] <exchange.pdf, id=65, 844.95674pt x 597.432pt>
-File: exchange.pdf Graphic file (type pdf)
- <use exchange.pdf>
-Package pdftex.def Info: exchange.pdf used on input line 190.
-(pdftex.def)             Requested size: 506.97795pt x 358.46196pt.
-
-Overfull \hbox (76.97333pt too wide) in paragraph at lines 190--191
- [] 
- []
-
-[8]
+<exchange.png, id=37, 626.94225pt x 460.72125pt>
+File: exchange.png Graphic file (type png)
+ <use exchange.png>
+Package pdftex.def Info: exchange.png used on input line 190.
+(pdftex.def)             Requested size: 376.16824pt x 276.43488pt.
+ [7]
 Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
 
-[9 <D:/papers/gene_based_inter_qualitative/gene_interaction/paper3/exchange.pdf
+[8 <D:/papers/gene_based_inter_qualitative/gene_interaction/paper3/exchange.png
 >]
 Underfull \hbox (badness 10000) in paragraph at lines 250--251
 
  []
 
-[10]
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 252--253
 
  []
@@ -936,12 +927,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 255--257
 
  []
 
-[11]
+
 Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
 
-
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 267--268
 
  []
@@ -951,12 +942,12 @@ Overfull \hbox (29.68607pt too wide) in paragraph at lines 272--362
  [][] 
  []
 
-[12]
+[11]
 Overfull \hbox (2.49855pt too wide) in paragraph at lines 367--385
  [][] 
  []
 
-[13]
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 419--420
 
  []
@@ -966,51 +957,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 421--422
 
  []
 
-[14] <boxplot_10simu.jpg, id=132, 653.44125pt x 752.8125pt>
+[13] <boxplot_10simu.jpg, id=66, 653.44125pt x 752.8125pt>
 File: boxplot_10simu.jpg Graphic file (type jpg)
 
 <use boxplot_10simu.jpg>
 Package pdftex.def Info: boxplot_10simu.jpg used on input line 429.
 (pdftex.def)             Requested size: 392.06776pt x 451.69098pt.
- [15]
-<average0204.jpg, id=136, 653.44125pt x 752.8125pt>
+ [14]
+<average0204.jpg, id=70, 653.44125pt x 752.8125pt>
 File: average0204.jpg Graphic file (type jpg)
  <use average0204.jpg>
 Package pdftex.def Info: average0204.jpg used on input line 436.
 (pdftex.def)             Requested size: 326.71982pt x 376.40532pt.
 
-[16 <D:/papers/gene_based_inter_qualitative/gene_interaction/paper3/boxplot_10s
-imu.jpg>] [17 <D:/papers/gene_based_inter_qualitative/gene_interaction/paper3/a
-verage0204.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 459--460
+[15 <D:/papers/gene_based_inter_qualitative/gene_interaction/paper3/boxplot_10s
+imu.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 444--445
+
+ []
+
+[16 <D:/papers/gene_based_inter_qualitative/gene_interaction/paper3/average0204
+.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 461--462
+Underfull \hbox (badness 10000) in paragraph at lines 457--458
 
  []
 
 
-Overfull \hbox (3.5855pt too wide) in paragraph at lines 463--464
+Overfull \hbox (3.5855pt too wide) in paragraph at lines 459--460
 \OT1/cmr/m/n/10.95 We ap-plied the pro-posed meth-od-s to e-val-u-ate for gene-
 level in-ter-ac-tion-s un-der-ly-ing Rheuma-
  []
 
-[18] [19] [20]
+[17] [18] [19]
 (D:\papers\gene_based_inter_qualitative\gene_interaction\paper3\gpXGB_1219.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 20811 strings out of 495354
- 444301 string characters out of 3183859
- 608276 words of memory out of 3000000
- 23499 multiletter control sequences out of 15000+200000
+ 20818 strings out of 495354
+ 444329 string characters out of 3183859
+ 608300 words of memory out of 3000000
+ 23505 multiletter control sequences out of 15000+200000
  14504 words of font info for 55 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 56i,16n,74p,1549b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,16n,74p,1574b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/CTEX/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmbx12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmbx9.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/
@@ -1025,9 +1021,9 @@ ype1/public/amsfonts/cm/cmr9.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm
 iKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/CTEX/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmti10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/m
 sam10.pfb>
-Output written on gpXGB_1219.pdf (20 pages, 770419 bytes).
+Output written on gpXGB_1219.pdf (19 pages, 1017074 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
+ 143 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
