@@ -104,7 +104,7 @@ P(y=1|X_g,X_g',X_\urcorner g,g')=F_1(X_g,X_\urcorner g,g')*F_2(X_g',X_\urcorner 
 
 \begin{figure}[H]
     \begin{center}
-       \includegraphics[scale=0.6]{framework_0116.pdf}
+       \includegraphics[scale=0.6]{framework_0116.png}
     \end{center}
 \caption{\label{det}The framework of geXGB}
 \end{figure}
@@ -187,7 +187,7 @@ F_1(X^A_g,X^B_{\urcorner g,g'})F_2(X^B_{g'},X^B_{\urcorner g,g'})F_1(X^B_g,X^A_{
 
 \begin{figure}[H]
     \begin{center}
-       \includegraphics[scale=0.6]{exchange.pdf}
+       \includegraphics[scale=0.6]{exchange.png}
     \end{center}
 \caption{\label{det}{\bf Illustration of exchange strategy of getting the test dataset:} (a) $A$ and $B$ are the two original samples from the test dataset, by exchanging the corresponding parts of $A$ and $B$ according to the rules indicated by the arrows, we obtain sets of genotypes $C,D,E,F,G,H$. (b) Exchange the genotypes in $A$ and $B$ in all genes except for the $g$-th and the $g'$-th, resulting in $C$ and $D$. (c)  Exchange the genotypes of the $g'$-th gene in $A$ and $B$, resulting in $E$ and $F$. (d) Exchange the genotypes of the $g$-th gene in $A$ and $B$, resulting in $G$ and $H$.}
 \end{figure}
@@ -441,39 +441,35 @@ To evaluate the statistical power of our geXGB and other three competitive metho
 
 \subsection{Real data sets analysis}
 
-For the Rheumatoid Arthritis(RA) study of the hsa05323 pathway, each unique gene pair was evaluated, resulting in $C_{48}^2=1128$ total pairs for 48 genes. We performed all the methods 10 times to avoid any influence of random factors. With significance level $\alpha=0.01$ and multiple testing adjustment, for KCCU and GIGBM, we obtained around 43 and 65 significant GGIs, respectively. Among them, 30 and 65 have p-value equal to 0. AGGrGETOr did not have any significant result. Followed by the \cite{7}, without the multiple testing correction, AGGrGETOr got around 16 significant GGIs. As for geXGB, the $\Delta inter$ had a dramatic drop between the first and the second pair of genes, and a second drop happened around the seventh pair. Here we chose the average top 10 for geXGB and AGGrGETOr to analysis, approximately $1\%$ of the total interactions (Table4).
+For the Rheumatoid Arthritis(RA) study of the hsa05323 pathway, each unique gene pair was evaluated, resulting in $C_{48}^2=1128$ total pairs for 48 genes. We performed all the methods 10 times to avoid any influence of random factors. With significance level $\alpha=0.01$ and multiple testing adjustment, for KCCU and GIGBM, we obtained around 43 and 65 significant GGIs, respectively. Among them, 30 and 65 have p-value equal to 0. AGGrGETOr did not have any significant result. Followed by the \cite{7}, without the multiple testing correction, AGGrGETOr got around 16 significant GGIs. As for geXGB, the $\Delta inter$ had a dramatic drop between the first and the second pair of genes, and a second drop happened around the seventh pair. Here we chose the average top 10 for geXGB and AGGrGETOr to analysis, approximately $1\%$ of the total interactions. \\
 
-The top interaction hit of geXGB is Angiopoietin (Ang)1-Tie2. New blood vessel formation-'angiogenesis'-is recognized as a key event in the formation and maintenance of the pannus in RA, while Ang-1 signalling to the Tie2 tyrosine kinase receptor has an essential role in blood vessel remodeling and angiogenesis.
+\noindent The top interaction hit of geXGB is Angiopoietin (Ang)1-Tie2. This interaction has already been verified. Synovial angiogenesis is a critical early event in RA, fostering pannus formation, persistent leukocyte infiltration, and lining layer hyperplasia, leading to cartilage and bone destruction\cite{14,15}.RA angiogenesis is driven and maintained by proangiogenic factors released from RA synovial tissue myeloid cells and fibroblasts, which include angiopoietin (Ang)1 and 2 \cite{16,17}.The endothelial cell(EC) specific factor Ang1 and Ang2 and their tyrosine kinase receptors Tie1 and Tie2 are critical in normal and pathological vascular development \cite{18}. Ang1, Ang2, Tie1, and Tie2 are upregulated in RA synovial tissues. Evidence suggests that the Ang/Tie2 signaling pathway mediates the proangiogenic effects of tumor necrosis factor alpha ($TNF-\alpha$), interleukin (IL)-6, and tolllike receptor (TLR)2 in RA \cite{17,19}. The seventh hit of AGGrEGATOr is interaction between RANKL and APRIL. It is shown that fibroblast-like synoviocytes (FLS) are among the principal effector cells in the pathogenesis of rheumatoid arthritis (RA), while APRIL increased RA FLS expression of RANKL \cite{20}. KCCU and GBIGM have too many "positive" results that we could not to choose the top 10. \\
 
-The alterations in the density and/or function of the blood vessels present
-
-
-Ang-1 signalling to the Tie2 tyrosine kinase receptor has an essential role in blood vessel remodeling and angiogenesis.
-
-
-
-
-The tyrosine kinase receptor Tie2 makes essential contributions to vascular development and blood vessel remodeling through its interaction with angiopoietin (Ang) ligands, of which Ang-1 and Ang-2 are the best characterized [1], [2]. Ang-1 binding to Tie2 induces autophosphorylation of Tie2 on multiple tyrosine residues and activation of downstream signaling pathways.
-Ang-1, Ang-2 and Tie2 are all expressed in rheumatoid arthritis (RA) synovial tissue. Activated Tie2 is prominently observed in RA synovial macrophages, both Ang-1 and Ang-2 can cooperate with TNF to induce macrophage IL-6 production, and Ang-1 signaling to Tie2 promotes disease persistence and progression in early RA.
-
+\noindent Table 4 shows the RA results for four methods. We listed the top 10 of geXBG and AGGrEGATOr, respectively, and also give the ranking for these pairs in other three methods. Within the top 10 reuslts of geXBG and AGGrEGATOr, only one pair potential interaction between MCSF and Ang1 captured by both methods. However, there is no direct evidence to show the interaction between MCSF and Ang1. Although both geXBG and AGGrEGATOr have found a pair of meaningful interaction within a relative small number of results, there are almost no overlapping between these four methods.\\
 
 
 \section{Discussion}
 
-This study proposed geXGB, a new machine learning algorithm based procedure, to detect interaction at the gene level by applying the XGBoost and exchange strategies. XGBoost is a powerful machine learning algorithm that can capture the underlying nonlinear additive structure of dataset with excellent time and accuracy performance. With the well trained model of the GWAS dataset, we applied the exchange strategy (Equation 9) to evaluate the extent the prediction deviate from our defined interaction form (Equation 2) and treat it as the strength of interaction for each gene pair. We proved the capacity of geXGB to detect gene interaction, especially for the pure and strict type interactions. According to a power study based on a wide range of disease models with different genetic constrain combinations, geXGB is shown to be the most powerful method when one causal pair is associated with the case-control phenotypes.\\
 
-\noindent In the geXGB procedure, we consider the interaction between two genes as an additive model, each additive term represent some kind of non-linear interaction between SNPs from the two genes. We did not model the interactions form between SNPs explicity. Such assumption made the method more powerful compared to AGGrEGATOr or KCCU. Our Method also can include the covariates matrix, which can correct confounding information such as population stratification with no more computational resources. Necessary for GWAS. We have applied a version with parallelize calculation for the permutation.\\
+This study proposed geXGB, a new machine learning algorithm based procedure, to detect interaction at the gene level by applying the XGBoost and exchange strategies. XGBoost is a powerful machine learning algorithm that can capture the underlying nonlinear additive structure of all the genotypes with excellent time and accuracy performance. With the well trained model of the GWAS dataset, we applied the exchange strategy (Equation 9) to evaluate the extent the prediction deviate from our defined interaction form(Equation 2) and treat it as the strength of interaction for each gene pair. We proved the capacity of geXGB to detect gene interaction, especially for the pure and strict type interactions. According to a simulation study based on a wide range of disease models with different genetic constrain combinations, geXGB is shown to be the most powerful method under this kind of interactions.\\
 
-\noindent We applied the proposed methods to evaluate for gene-level interactions underlying Rheumatoid Arthritis (RA). We considered all pairs of 48 genes which has been shown in the RA pathway hsa05323 from KEGG. The top pair interaction between Ang1 and Tie2 has an important role in RA mechanism.
+\noindent In the geXGB procedure, we assume the interaction between two genes as a "product form" of classification probabilities of XGBoost for exchanged "fake" samples in the test dataset. The probabilities has some kinds of non-linear interaction between SNPs from the genotypes of two genes. We did not model the interactions form between SNPs explicity, any non-linear form of SNPs may captured by the XGBoost. Such assumption made the method more powerful compared to AGGrEGATOr or KCCU in some situation. Our Method also can include the covariates matrix, which can correct confounding information such as population stratification, sex, age with no more computational resources. which is necessary for GWAS. \\
 
-\noindent Genome-wide implementation of geXGB is hardly feasible since the input of the model is all the candidate genes, too many unrelated genes may be harmful for the performance of the XGBoost model. To avoid the computational all the gene pairs, another strategy consists in using prior biological knowledge to reduce the number of genes need to be considered. Indeed, geXGB procedure can easily be used in a network based approach since it is widely assumed that protein-protein interaction network or pathway-based approach can be successfully combined to GWAS. Furthermore, the term ``gene'' refers to a collection of SNPs and can be any locus, even some non-function unit such as non-coding RNA. For all the reason we believe that the geXGB procedure can help detecting a part of the missing heritability.
+\noindent We applied the proposed methods to evaluate for gene-level interactions underlying Rheumatoid Arthritis (RA). We choose genes from a known RA pathway in KEGG to verify the performance of the method on real-life situation. The top pair interaction found by geXGB is between Ang1 and Tie2, which was proved to have an important role in synovial angiogenesis, an early event in RA. The seventh of AGGrEGATOr ranking result is also a meaningful pair interaction between APRIL and RANKL. geXGB has shown better performance in the simulation study under disease models with pure and strict interaction. As for the real dataset, we suggest that combining all the top results of the four methods as potential interactions will be better since each method may capture a special aspect of the dataset.
+
+\noindent Genome-wide implementation of geXGB is hardly feasible since the input of the model is all the candidate genes, too many unrelated genes may be harmful for the performance of the XGBoost model. To avoid the computational all the gene pairs, another strategy consists in using prior biological knowledge to reduce the number of genes need to be considered. Indeed, geXGB procedure can easily be used in a network based approach since it is widely assumed that protein-protein interaction network or pathway-based approach can be successfully combined to GWAS. Furthermore, the term ``gene'' refers to a collection of SNPs and can be any locus, even some non-function unit such as non-coding RNA. For all the reason we believe that the geXGB procedure can help detecting a part of the missing heritability.  
+
+Something for IMPUTE, delete the correlation genes. And python XGBoost version has the parallel implement, do not execute many of them together.
+
+Although we have verified that geXGB procedure for detecting gene-gene interaction outperforms the previous methods on sumilated pure and strict disease models and also be reliable on real dataset, there is still room for improvement our approach. something for getting p-value
+
 
 
 \section{Conflict of interest}
 
 \section{Acknowledgements}
 
-\begin{thebibliography}{9}
+\begin{thebibliography}{20}
 \bibitem{1}Wan, X., et al., {\em BOOST: A fast approach to detecting gene-gene interactions in genome-wide case-control studies}. Am J Hum Genet, 2010. 87(3): p. 325-40.
 \bibitem{2}Li, J., et al., {\em Detecting gene-gene interactions using a permutation-based random forest method}. BioData Min, 2016. 9: p. 14.
 \bibitem{3}Peng, Q., J. Zhao, and F. Xue, {\em A gene-based method for detecting gene-gene co-association in a case-control association study}. Eur J Hum Genet, 2010. 18(5): p. 582-7.
@@ -487,8 +483,13 @@ This study proposed geXGB, a new machine learning algorithm based procedure, to 
 \bibitem{10}Greene, C.S., et al., {\em Enabling personal genomics with an explicit test of epistasis}. Pac Symp Biocomput, 2010: p. 327-36.
 \bibitem{11}Urbanowicz, R.J., et al., {\em GAMETES: a fast, direct algorithm for generating pure, strict, epistatic models with random architectures}. BioData Min, 2012. 5(1): p. 16.
 \bibitem{12}Laurie, C.C., et al., {\em Quality control and quality assurance in genotypic data for genome-wide association studies}. Genet Epidemiol, 2010. 34(6): p. 591-602.
-
-
+\bibitem{14}Elshabrawy H.A., et al., {\em The pathogenic role of angiogenesis in rheumatoid arthritis}.Angiogenesis, 2015. 18: p. 433-448.
+\bibitem{15}Szekanecz Z., et al., {\em Angiogenesis and vasculogenesis in rheumatoid arthritis}.Curr Opin Rheumatol, 2010. 22: p. 299-306.
+\bibitem{16}Nagashima M., et al., {\em Role of vascular endothelial growth factor in angiogenesis of rheumatoid arthritis}.J Rheumatol, 1995. 22: p. 1624-1630.
+\bibitem{17}Kayakabe K., et al., {\em Interleukin-6 promotes destabilized angiogenesis by modulating angiopoietin expression in rheumatoid arthritis}.Rheumatology (Oxford), 2012. 51:1571-1579.
+\bibitem{18}Morisada T., et al., {\em Angiopoietins and angiopoietin-like proteins in angiogenesis}.Endothelium, 2006, 13: p. 71-79.
+\bibitem{19}Saber T., et al., {\em  Toll-like receptor 2 induced angiogenesis and invasion is mediated through the Tie2 signalling pathway in rheumatoid arthritis}.PLoS One, 2011, 6:e23540.
+\bibitem{20}Nagatani K., et al., {\em Rheumatoid arthritis fibroblast-like synoviocytes express BCMA and are stimulated by APRIL}. Arthritis & Rheumatism, 2007, 56(11): p. 3554-3563.
 
 \end{thebibliography}
 
