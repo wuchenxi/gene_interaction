@@ -447,6 +447,58 @@ For the Rheumatoid Arthritis(RA) study of the hsa05323 pathway, each unique gene
 
 \noindent The most significant interaction found by geXGB is Angiopoietin (Ang)1-Tie2. This interaction has already been verified. Synovial angiogenesis is a critical early event in RA, fostering pannus formation, persistent leukocyte infiltration, and lining layer hyperplasia, leading to cartilage and bone destruction\cite{14,15}. RA angiogenesis is driven and maintained by proangiogenic factors released from RA synovial tissue myeloid cells and fibroblasts, which include angiopoietin (Ang)1 and 2 \cite{16,17}. The endothelial cell(EC) specific factor Ang1 and Ang2 and their tyrosine kinase receptors Tie1 and Tie2 are critical in normal and pathological vascular development \cite{18}. Ang1, Ang2, Tie1, and Tie2 are upregulated in RA synovial tissues. Evidence suggests that the Ang/Tie2 signaling pathway mediates the proangiogenic effects of tumor necrosis factor alpha ($TNF-\alpha$), interleukin (IL)-6, and tolllike receptor (TLR)2 in RA \cite{17,19}. The seventh most significant pair found by AGGrEGATOr is interaction between RANKL and APRIL. It is shown that fibroblast-like synoviocytes (FLS) are among the principal effector cells in the pathogenesis of rheumatoid arthritis (RA), while APRIL increased RA FLS expression of RANKL \cite{20}. KCCU and GBIGM give a p-value of 0 to too many gene pairs that we are unable choose the top 10. \\
 
+\begin{table}[H]\footnotesize
+\centering
+\caption{Summary of ranking results in the real dataset analysis}
+\begin{tabular}{|c|c|cccc|}
+  \hline
+  Gene 1&Gene 2&&Ranking&&\\
+  \cline{3-6}
+  &&geXGB&AGGrGETOr&KCCU&GBIGM\\
+  \hline
+  Ang1&Tie2&1&1099&560&260\\
+  \hline
+  Tie2&Flt1&2&1108&685&460\\
+  \hline
+  Tie2&LFA1&3&1121&739&1035\\
+  \hline
+  MHCII&Ang1&4&1095&342&{\bf 70}\\
+  \hline
+  MHCII&Tie2&5&858&950&680\\
+  \hline
+  MCSF&Ang1&6&{\bf 3}&320&590\\
+  \hline
+  MCSF&Tie2&7&1033&485&495\\
+  \hline
+  Ang1&Flt1&8&1029&265&500\\
+  \hline
+  Tie2&RANK&9&1117&720&524\\
+  \hline
+  TGF-beta&Tie2&10&1037&745&580\\
+  \hline
+  CD86&CCL2&900&1&1066&650\\
+  \hline
+  TGF-beta&AP1&270&2&605&260\\
+  \hline
+  MCSF&Ang1&{\bf 6}&3&320&590\\
+  \hline
+  CD86&TLR4&650&4&{\bf 50}&565\\
+  \hline
+  CXCL1&RANKL&770&5&130&825\\
+  \hline
+  CCL20&TGF-beta&660&6&300&350\\
+  \hline
+  RANKL&APRIL&540&7&270&180\\
+  \hline
+  RANK&TGF-beta&340&8&875&{\bf 68}\\
+  \hline
+  IL23&LFA1&750&9&395&530\\
+  \hline
+  IL1&V-ATPase&1020&10&360&905\\
+  \hline
+\end{tabular}
+\end{table}
+
 \noindent Table 4 shows the RA results for four methods. We listed the top 10 of geXBG and AGGrEGATOr, respectively, and also give the ranking for these pairs in other three methods. Within the top 10 reuslts of geXBG and AGGrEGATOr, only one pair potential interaction between MCSF and Ang1 is captured by both methods. However, there is not yet direct evidence to show the interaction between MCSF and Ang1. Both geXBG and AGGrEGATOr have found a pair of meaningful interaction within a relative small number of results, however, there is almost no overlap between the results of the four methods.\\
 
 
