@@ -420,7 +420,7 @@ To evaluate the statistical power of our geXGB and other three competitive metho
 
 \noindent Table 1 shows the empirical statistical power of all methods on the simulated data sets of the first scenario. Table 2 shows the average statistical power of Table 1. Table 3 displays the average statistical power of all methods on the simulated data sets of the second scenario. Figure~\ref{det} is a boxplot summary of Table 1. Bold font shows the best performed method in each model under a given heritability-MAF combination. Notice that a larger value indicates better performance. On average, geXGB is the best performing algorithm in this comparison, it largely outperforms the other methods, but not for all the data sets: on some data sets it yields to AGGrEGATOr. However, its performance is remarkably consistent and is the top performer for most data sets. AGGrEGATOr can achieve the same performance when MAF is 0.2 and heritability is larger than 0.05, while geXGB gives much better performance under smaller heritability. When heritability is the smallest value, 0.01, geXGB outperforms in 6 models while AGGrEGATOr in 3 when MAF=0.2, and 9 v.s.2 when MAF=0.4. AGGrEGATOr has better average performance than KCCU. However, when it underperforms on a data set, its performance can be very low, even lower than KCCU, for instance in M7,M8,M9 of (h=0.2,MAF=0.4). The Figure~\ref{det} also shows that AGGrEGATOr has a large range of performance for the 10 models. But geXGB does not exhibit this poor behavior. \\
 
-\noindent KCCU is able to detect the interaction of some simulated disease models in our study. Figure~\ref{avg} shows the relationship between heritability and the average performance. From it, we can see that KCCU has the similar performance pattern with AGGrEGATOr, although AGGrEGATOr is much more powerful in most of the simulated scenarios. GBIGM has little power in detecting this type of gene-gene interaction with only one causal pair. This result replicated Emily \cite{7}'s result of simulation. \\
+\noindent KCCU is able to detect the interaction of some simulated disease models in our study. Figure~\ref{avg} shows the relationship between heritability and the average performance. From it, we can see that KCCU has the similar performance pattern with AGGrEGATOr, although AGGrEGATOr is much more powerful in most of the simulated scenarios. GBIGM has little power in detecting this type of gene-gene interaction with only one causal pair. This result replicated Emily's \cite{7} result of simulation. \\
 
 \noindent Considering the relationship between performance of geXGB and genetic constrains, as expected, power of all the simulation is affected greatly by heritability, i.e. the effect size of the interaction. With heritability going from 0.01 to 0.025, geXGB almost doubled its power for a given sample size of $n=3000$ with $MAF=0.2$. Other methods are also shown an steady upward trend (Table 1). It also depends on the minor allele frequencies (MAF) of the interacting SNPs, e.g. for the cases of h=0.01, the power of the different simulations ranges between 0.14-0.93 for $MAF=0.2$, while it ranges between 0.66-0.96 for $MAF=0.4$ (Table 1). The average power is 0.554 for $MAF=0.2$, which is much lower than 0.84 for $MAF=0.4$ (Table 2). Sample size of the data set has a considerable effect on power as well, geXGB, AGGrGETOr and KCCU have lower power estimated for $n=1000$ compared to $n=5000$ (Table 3).
 
@@ -428,14 +428,14 @@ To evaluate the statistical power of our geXGB and other three competitive metho
 
 \begin{figure}[H]
     \begin{center}
-       \includegraphics[scale=0.6]{boxplot_10simu.jpg}
+       \includegraphics[scale=0.6]{boxplot10_simu.pdf}
     \end{center}
 \caption{\label{det}Performance on the simulated datasets}
 \end{figure}
 
 \begin{figure}[H]
     \begin{center}
-       \includegraphics[scale=0.5]{average0204.jpg}
+       \includegraphics[scale=0.5]{average0204.pdf}
     \end{center}
 \caption{\label{avg}Average performance on the simulated datasets}
 \end{figure}
